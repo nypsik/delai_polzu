@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты | Делай пользу!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/favicon.ico">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<header>
+		<a id="logo" href="https://vk.com/delaypolzu"><img src="img/logo.png"></a>
+		<nav>
+		<ul class="menu">
+			<li><a href="/">Главная</a></li>
+			<li><a href="/mission.html">Миссия</a></li>
+			<li><a href="/contacts.html">Контакты</a></li>
+		</ul>
+		</nav>
+	</header>
+	<p>Хочешь помогать? Хочешь сотрудничать? Хочешь просто сказать нам, какие мы классные? Пиши, мы ждем!</p>
+	<form method="post" action="index.php">
+    <label for="name">Имя</label>
+    <input id="name" name="name" placeholder="Как тебя зовут?">     
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="Куда тебе отвечать?">
+    <label for="phone">Телефон</label>
+    <input id="phone" name="phone" type="tel" placeholder="Тебе перезвонить?">
+    <input type="radio" name="topic" value="volunteer">Помощь
+  	<input type="radio" name="topic" value="business">Сотрудничество
+  	<input type="radio" name="topic" value="other">Другое
+    <label for="message">Сообщение</label>
+    <textarea id="message" name="message" placeholder="О чем ты хочешь поговорить?"></textarea>       
+    <input id="submit" name="submit" type="submit" value="Отправить">   
+	</form>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9405.472190351966!2d27.574895!3d53.889662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb0aa192fd34d87dc!2z0KXRg9C70LjQs9Cw0L0!5e0!3m2!1sru!2sby!4v1466031598257" width="1200" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<footer>
+		<a id="vk" href="https://vk.com/delaypolzu">VK</a>
+		<a id="twitter" href="https://twitter.com/cocoshampoo">T</a>
+		<a id="instagram" href="https://www.instagram.com/cocoshampoo/">I</a>
+	</footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
