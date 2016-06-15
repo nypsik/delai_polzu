@@ -1,0 +1,130 @@
+html{
+	width: 100%;
+	background: #f9fbe7 url(img/pattern.png) repeat;
+	font: 1em "Arial", sans-serif;
+	color: #424242;
+}
+
+body {
+	margin: -1px auto;
+	width: 100%;
+	max-width: 1200px;
+	background: #fff;
+	padding-top: 1px;
+}
+
+p {
+	padding: 5px 40px;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #ff0037;
+}
+
+header {
+	padding-top: 10px;
+	-webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+}
+
+footer, .gallery {
+	-webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+}
+
+
+#logo {
+	display: block;
+	margin: 30px auto;
+	width: 200px;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+nav li {
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+.gallery_wrapper {
+	height: 400px;
+	overflow: hidden;
+}
+
+.gallery{
+	/*display: -webkit-box;    OLD: Safari,  iOS, Android browser, older WebKit browsers.  
+   	display: -moz-box;       OLD: Firefox (buggy)
+   	display: -ms-flexbox;   MID: IE 10
+   	display: -webkit-flex;  NEW, Chrome 21–28, Safari 6.1+ */
+   	display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+  /*  -webkit-box-align: center; -moz-box-align: center; OLD… 
+   -ms-flex-align: center; /* You know the drill now… 
+   -webkit-align-items: center;*/
+   	align-items: center;
+
+   /*-webkit-box-pack: center; -moz-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center; */
+   	justify-content: center;
+   	flex-wrap: wrap;
+   	margin: 0;
+   	width: 100%
+}
+
+.gallery img {
+	display: -webkit-box; display: -moz-box;
+   	display: -ms-flexbox;
+   	display: -webkit-flex;
+   	display: flex;
+
+   -webkit-box-align: center; -moz-box-align: center;
+   -ms-flex-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+   width: 200px;
+}
+
+.events {
+	text-align: center;
+	margin-top: 40px;
+	clear: left;
+}
+
+h3 {
+	color: #aeea00;
+	text-transform: uppercase;
+}
+
+.events a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ff0037;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0;
+}
+ 
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*iframe {
+	display:block;
+	margin: 20px auto;
+}*/
