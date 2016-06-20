@@ -7,6 +7,7 @@
   <title>Контакты | Делай пользу!</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500&subset=cyrillic" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,26 +26,70 @@
 		</nav>
 	</header>
 	<p>Хочешь помогать? Хочешь сотрудничать? Хочешь просто сказать нам, какие мы классные? Пиши, мы ждем!</p>
-	<form method="post" action="index.php">
-    <label for="name">Имя</label>
-    <input id="name" name="name" placeholder="Как тебя зовут?">     
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" placeholder="Куда тебе отвечать?">
-    <label for="phone">Телефон</label>
-    <input id="phone" name="phone" type="tel" placeholder="Тебе перезвонить?">
+	<form method="post" action="send_form.php">
+    <div class="form_item">
+<!--     <label for="name">Имя</label><br>
+ -->    <input class="field" id="name" name="name" placeholder="Имя" required >
+    </div>
+    <div class="form_item">     
+<!--     <label for="email">Email</label><br>
+ -->    <input class="field" id="email" name="email" type="email" placeholder="Email" required >
+    </div>
+    <div class="form_item">
+<!--     <label for="phone">Телефон</label><br>
+ -->    <input class="field" id="phone" name="phone" type="tel" placeholder="Телефон">
+    </div>
+    <!-- <div class="form_item">
     <input type="radio" name="topic" value="volunteer">Помощь
   	<input type="radio" name="topic" value="business">Сотрудничество
   	<input type="radio" name="topic" value="other">Другое
-    <label for="message">Сообщение</label>
-    <textarea id="message" name="message" placeholder="О чем ты хочешь поговорить?"></textarea>       
-    <input id="submit" name="submit" type="submit" value="Отправить">   
+    </div> -->
+    <div class="form_item">
+<!--     <label for="message">Сообщение</label><br>
+ -->    <textarea class="field" id="message" name="message" placeholder="О чем ты хочешь поговорить?" required ></textarea>
+    </div>
+    <div class="form_item button">      
+    <button>отправить</button>
+    </div>  
 	</form>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9405.472190351966!2d27.574895!3d53.889662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb0aa192fd34d87dc!2z0KXRg9C70LjQs9Cw0L0!5e0!3m2!1sru!2sby!4v1466031598257" width="1200" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div id="map"></div>
+<!-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9405.472190351966!2d27.574895!3d53.889662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb0aa192fd34d87dc!2z0KXRg9C70LjQs9Cw0L0!5e0!3m2!1sru!2sby!4v1466031598257" width="1200" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 	<footer>
 		<a id="vk" href="https://vk.com/delaypolzu">VK</a>
 		<a id="twitter" href="https://twitter.com/cocoshampoo">T</a>
 		<a id="instagram" href="https://www.instagram.com/cocoshampoo/">I</a>
 	</footer>
+
   <script src="js/scripts.js"></script>
+
+  <script type="text/javascript">
+
+var map;
+function initMap() {
+  // map = new google.maps.Map(document.getElementById('map'), {
+  //   center: {lat: 53.890433, lng: 27.574766},
+  //   zoom: 15
+  // });
+
+  var myLatLng = {lat: 53.889660, lng: 27.575008};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Хулиган'
+  });
+}
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHHcbDR-smEwP6z0BfMKNlmPjx3IVOGWg&callback=initMap">
+    </script>
+
+</script>
 </body>
 </html>
